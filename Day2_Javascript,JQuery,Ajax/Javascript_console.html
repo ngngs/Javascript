@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <script>
+            let num = 2 <!--변수 선언은 let-->
+            console.log(num)
+
+            <!--숫자형 변수는 사칙연산이 가능하다-->
+            let a = 7
+            let b = 2
+            console.log(a+b)
+            console.log(a/b) <!--몫-->
+            console.log(a%b) <!--나머지-->
+
+            <!--문자열 더하기-->
+            let firstName = "Harry" <!--문자열 선언은 ""또는''를 사용-->
+            let lastName = "Potter"
+            
+            console.log(firstName + lastName)
+            console.log(firstName + " " + lastName)
+
+            <!--변수 선언 시 두 번째 문자를 대문자로 써주는 naming convention을 따르자-->
+        
+            <!--문자열 대문자로 바꾸기-->
+            let myname = 'jungle'
+            console.log(myname.toUpperCase())
+        
+            <!--특정 문자를 기준으로 문자열 나누기-->
+            let myemail = 'test@gmail.com'
+            let result = myemail.split('@') <!--['test', 'gmail.com']으로 나옴-->
+            console.log(result[0])
+            console.log(result[1])
+            let result2 = result[1].split('.') <!--['gmail', 'com']-->
+            console.log(result2[0])
+            console.log(result2[1])
+
+            console.log(myemail.split('@')[1].split('.')[0]) <!--한줄로도 출력 가능-->
+
+
+            <!--특정 문자를 다른 문자로 바꾸기-->
+            let txt = '서울시-마포구-망원동'
+            let names = txt.split('-')
+            let result3 = names.join('>')
+
+            <!--Boolean 자료형-->
+            let x = true <!--무조건 소문자로 써야한다.-->
+            let y = false
+            
+            let aa = 4 > 2 <!--true 선언-->
+            console.log(aa)
+            console.log(!aa) <!--결과값 false-->
+            let bb = 2 != 2 <!--false 선언-->
+            console.log(aa&&bb) <!--and 연산자로 false 출력-->
+            console.log(aa||bb) <!-- or 연산자로 true 출력-->
+
+
+            <!--리스트-->
+            let a_list = []
+            let b_list = [1, 2, 'hey', 3]
+            console.log(b_list[1])
+            b_list[2] = 5 <!--값 수정 가능-->
+            console.log(b_list)
+            b_list.push('헤이') <!-- 값 추가, 값 넣기-->
+            console.log(b_list)
+            console.log(b_list.length) <!--리스트의 길이 구하기-->
+
+
+            <!--리스트는 다른 리스트를 요소로 가질 수 있다-->
+            let ab_list = [1, 4, 2, [3, 1]]
+            console.log(ab_list.length)
+            let cd_list = [4, 1, 0]
+            ab_list.push(cd_list)
+            console.log(ab_list)
+
+            <!--리스트 이어 붙이기-->
+            let ef_list = ab_list.concat(cd_list)
+            console.log(ef_list)
+
+            <!--딕셔너리-->
+            let aa_dict = {}
+            let bb_dict = {'name' : 'Bob', 'age' : 21}
+            console.log(bb_dict['name'])
+
+            <!--딕셔너리 값 수정하기-->
+            bb_dict['age'] = 40
+            console.log(bb_dict)
+
+            <!--딕셔너리 키:밸류 넣기, 추가하기-->
+            bb_dict['height'] = 180
+            console.log(bb_dict)
+
+            <!--딕셔너리를 요소로 갖는 리스트-->
+            names = [{'name':'bob', 'age':20}, {'name':'carry', 'age':38}]
+            console.log(names[0]['name'])
+
+            new_name = {'name':'john', 'age':7} <!--리스트에 딕셔너리 추가하기-->
+            names.push(new_name)
+            console.log(names)
+        </script>
+
+    </head>
+
+</html>

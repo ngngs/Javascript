@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function sum(num1, num2){
+                let result = num1 + num2
+                console.log(num1, "+", num2, "=", result)
+                return result
+            }
+
+            <!--조건문-->
+
+            <!--나이에 따라 다른 문구를 띄우기-->
+            let x = 23
+            if (x>20){
+                alert("성인입니다")
+            } else if (x>13){
+                alert("청소년입니다")
+            } else {
+                alert("어린이입니다")
+            }
+
+            <!--조건문을 함수로 이용하면 편리함-->
+            function isAdult(age){
+                if (age>=20){
+                    alert("성인")
+                } else if (age>13){
+                    alert("청소년")
+                } else {
+                    alert('어린이')
+                }
+            }
+            isAdult(5)
+            
+            <!--논리연산자를 활용한 조건문-->
+            function iAm(age, gender){
+                if (age<20 && gender =="남"){
+                    console.log("I am a boy.")
+                } else if (gender =="남"){
+                    console.log("I am a man.")
+                } else if (age<200 && gender == "여"){
+                    console.log("I am a girl.")            
+                } else if (gender=='여'){
+                    console.log("I am a woman.")
+                } else {
+                    console.log('I am who I am')
+                }
+            }
+
+            iAm(30, '남')
+
+
+            <!--반복문-->
+            for (let i = 0; i < 100; i++){
+                console.log(i)
+            }
+            <!-- for(1.시작조건; 2.반복조건; 4.더하기)3. 조건을 만족할 때 실행-->
+
+
+            <!--반복문은 단순히 숫자 출력뿐만 아니라 리스트와 함께 쓰임-->
+            let people = ['철수', '영희', '민수', '형준', '기남', '동희']
+            for(let i = 0; i < people.length; i++){
+                console.log(people[i])
+            }
+
+            <!--반복문을 이용한 딕셔너리를 요소로 갖는 리스트-->
+            let scores = [
+                {'name':'철수', 'score':90},
+                {'name':'영희', 'score':85},
+                {'name':'민수', 'score':70},
+                {'name':'형준', 'score':50},
+                {'name':'기남', 'score':68},
+                {'name':'동희', 'score':30},
+            ]
+        for (let i = 0; i < scores.length; i++){
+            console.log(scores[i])
+        }
+
+        <!--점수가 70 미만인 사람의 이름 출력-->
+        for (let i = 0; i <scores.length; i++){
+            let score = scores[i]
+            if(score['score']<70){
+                console.log(score['name'])
+            }
+        }
+
+        </script>
+    </head>
+</html>
